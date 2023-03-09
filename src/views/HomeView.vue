@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <HeaderPage class="float-right"/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -8,11 +8,16 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
+import HeaderPage from '@/components/HeaderPage.vue';
 
 export default {
   name: 'HomeView',
   components: {
     HelloWorld,
+    HeaderPage,
   },
 };
 </script>
+
+<style>
+</style>
