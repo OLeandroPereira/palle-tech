@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <HeaderPage />
     <h1>This is an about page</h1>
   </div>
@@ -9,7 +9,7 @@
 import HeaderPage from '@/components/HeaderPage.vue';
 
 export default {
-  name: 'AboutView',
+  name: 'FormularioView',
   components: {
     HeaderPage,
   },

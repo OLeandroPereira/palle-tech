@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div>
     <HeaderPage />
     <p>este é o About us</p>

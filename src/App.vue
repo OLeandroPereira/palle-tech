@@ -13,14 +13,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #afafc0;
 }
 
 a {
-  color: #2c3e50;
+  color: #3b83cc;
 
   &.router-link-exact-active {
-    color: #0400fc;
+    color: #d1d1dd;
   }
 }
 </style>
