@@ -29,13 +29,13 @@ export default {
 </script>
 
 <style scoped>
-  router-link {
-    font-family: 'Nunito Sans';
+*{
+    margin: 0;
+    padding: 0;
   }
-  a {
-    font-size: 26px;
-    font-weight: 50;
-    text-decoration: none;
-    margin-right: 20px;
-  }
+a {
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+}
 </style>
