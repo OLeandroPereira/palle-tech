@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import HomePage from '../views/HomePage.vue';
-import AboutView from '../views/AboutView.vue';
+import EmpresaView from '../views/EmpresaView.vue';
+import FormularioView from '../views/FormularioView.vue';
+import CadastroPage from '../views/CadastroPage.vue';
+import SobreView from '../views/SobreView.vue';
 
 Vue.use(VueRouter);
 
@@ -10,22 +11,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
+    component: EmpresaView,
   },
   {
     path: '/formulario',
     name: 'formulario',
-    component: AboutView,
+    component: FormularioView,
   },
   {
     path: '/cadastro',
     name: 'cadastro',
-    component: HomePage,
+    component: CadastroPage,
   },
   {
-    path: '/about',
-    name: 'about',
-    component: AboutView,
+    path: '/sobre',
+    name: 'sobre',
+    component: SobreView,
   },
 ];
 

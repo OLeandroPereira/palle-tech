@@ -14,7 +14,7 @@
           <router-link to="/">Empresa</router-link>
           <router-link to="/formulario">Formulário</router-link>
           <router-link to="/cadastro">Cadastro</router-link>
-          <router-link to="/about">About us</router-link>
+          <router-link to="/Sobre nós">Sobre nós</router-link>
         </nav>
         <router-view/>
       </div>

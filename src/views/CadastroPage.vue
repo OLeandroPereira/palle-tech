@@ -15,7 +15,7 @@ import HeaderPage from '@/components/HeaderPage.vue';
 
 export default {
   components: { HeaderPage },
-  name: 'HomePage',
+  name: 'CadastroPage',
 };
 </script>
 
