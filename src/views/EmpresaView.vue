@@ -39,14 +39,7 @@ export default {
 };
 </script>
 
-<style>
-html, body {
-  height: 85%;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.755);
-}
-
+<style scoped>
 .bg-image {
   position: fixed;
   top: 0;

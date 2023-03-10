@@ -1,14 +1,20 @@
 <template>
-  <nav class="navbar navbar-expand-md bg-body-tertiary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button"
-      data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container py-3">
+      <router-link class="nav-link" to="/">
+        <img src="../assets/logo.png" alt="logo Palle-tech">
+      </router-link>
+      <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar-items"
+      aria-controls="navbar-items"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      >
+      <i class="bi bi-list"></i>
       </button>
-      <div class="d-none d-md-block">
-        <img alt="Vue logo" src="../assets/logo.png">
-      </div>
       <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -40,7 +46,6 @@ export default {
 nav {
   height: 100px;
   background-color: rgba(0, 0, 0, 0.519);
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;

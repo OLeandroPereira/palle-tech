@@ -42,7 +42,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 .hello {
   background-color: rgba(0, 0, 0, 0.755);
 }
