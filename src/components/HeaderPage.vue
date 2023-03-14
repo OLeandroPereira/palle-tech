@@ -23,13 +23,13 @@
           aria-current="page" exact-active-class="active">Empresa<span
           class="underline"></span></router-link>
           <router-link to="/formulario"
-          class="nav-link" active exact-active-class="active">Formulário<span
+          class="nav-link" exact-active-class="active">Formulário<span
           class="underline"></span></router-link>
           <router-link to="/cadastro"
-          class="nav-link" activeactive exact-active-class="active">Cadastro<span
+          class="nav-link" exact-active-class="active">Cadastro<span
           class="underline"></span></router-link>
           <router-link to="/sobre"
-          class="nav-link" activeactive exact-active-class="active">Sobre nós<span
+          class="nav-link" exact-active-class="active">Sobre nós<span
           class="underline"></span></router-link>
         </ul>
       </div>
@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style scoped>
+  .navbar {
+    border-bottom: 1px solid #F35A04;
+  }
   .navbar-toggler {
     background-color: #F35A04;
   }
@@ -68,13 +71,13 @@ export default {
     color: #FFF9;
   }
   .nav-link.active {
-    background-color: #FFF9;
+    background: #FFF9;
   }
   .underline {
   display: block;
   height: 3px;
   background: linear-gradient(to right, #ff4d4d, #ff9800);
   transform: scaleX(0);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
 }
 </style>
