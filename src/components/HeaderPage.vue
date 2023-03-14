@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-md bg-dark" id="navbar">
+  <nav class="navbar navbar-expand-md fixed-top bg-dark" id="navbar">
     <div class="container py-3">
       <router-link to="/" class="navbar-brand">
-      <img src="../assets/image/logo.png" alt="Palle-Tech" />
+      <img src="../assets/image/logo3.png" alt="Palle-Tech" style="width: 150px;"/>
       </router-link>
       <button
         class="navbar-toggler"
@@ -79,5 +79,10 @@ export default {
   background: linear-gradient(to right, #ff4d4d, #ff9800);
   transform: scaleX(0);
   transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+@media screen and (max-width: 767px) {
+  .underline {
+    display: none;
+  }
 }
 </style>
