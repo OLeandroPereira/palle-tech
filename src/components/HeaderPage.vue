@@ -1,36 +1,38 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-light bg-light p-5" id="navbar">
-    <a href="" class="navbar-brand">
+  <nav class="navbar navbar-expand-md bg-dark" id="navbar">
+    <div class="container py-3">
+      <router-link to="/" class="navbar-brand">
       <img src="../assets/image/logo.png" alt="Palle-Tech" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbar-items"
-      aria-controls="navbar-items"
-      style="cursor:pointer"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      </router-link>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar-items"
+        aria-controls="navbar-items"
+        style="cursor:pointer"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-end mx-5" id="navbar-items">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">Empresa</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Formulário</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Cadastro</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Sobre nós</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse justify-content-end" id="navbar-items">
+        <ul class="navbar-nav">
+          <router-link to="/" class="nav-link"
+          aria-current="page" exact-active-class="active">Empresa<span
+          class="underline"></span></router-link>
+          <router-link to="/formulario"
+          class="nav-link" active exact-active-class="active">Formulário<span
+          class="underline"></span></router-link>
+          <router-link to="/cadastro"
+          class="nav-link" activeactive exact-active-class="active">Cadastro<span
+          class="underline"></span></router-link>
+          <router-link to="/sobre"
+          class="nav-link" activeactive exact-active-class="active">Sobre nós<span
+          class="underline"></span></router-link>
+        </ul>
+      </div>
     </div>
   </nav>
 </template>
@@ -38,7 +40,41 @@
 <script>
 export default {
   name: 'HeaderPage',
+  mounted() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach((link) => {
+      const underline = link.querySelector('.underline');
+
+      link.addEventListener('mouseover', () => {
+        underline.style.transform = 'scaleX(1)';
+      });
+
+      link.addEventListener('mouseout', () => {
+        underline.style.transform = 'scaleX(0)';
+      });
+    });
+  },
 };
 </script>
 
-<style lang="scss"></style>
+<style scoped>
+  .navbar-toggler {
+    background-color: #F35A04;
+  }
+  .nav-link {
+    color: #F35A04;
+  }
+  .nav-link:hover {
+    color: #FFF9;
+  }
+  .nav-link.active {
+    background-color: #FFF9;
+  }
+  .underline {
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, #ff4d4d, #ff9800);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+</style>
