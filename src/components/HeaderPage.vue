@@ -17,7 +17,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbar-items">
+      <div class="collapse navbar-collapse" id="navbar-items">
         <ul class="navbar-nav">
           <router-link to="/" class="nav-link"
           aria-current="page" exact-active-class="active">Empresa<span
@@ -58,6 +58,10 @@ export default {
 </script>
 
 <style scoped>
+  #navbar-items {
+    display: flex;
+    justify-content: center;
+  }
   .navbar {
     border-bottom: 1px solid #F35A04;
   }
@@ -66,6 +70,7 @@ export default {
   }
   .nav-link {
     color: #F35A04;
+    text-transform: uppercase;
   }
   .nav-link:hover {
     color: #FFF9;
