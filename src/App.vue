@@ -8,9 +8,6 @@
 </template>
 
 <style lang="scss">
-html, body {
-  background-color: rgba(0, 0, 0, 0.755);
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

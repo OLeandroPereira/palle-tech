@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div>
-    <HeaderPage />
-    </div>
     <div class="container">
+      <HeaderPage />
       <div class="banner">
         <div id="carouselExampleIndicators"
         class="carousel slide"
@@ -45,40 +43,40 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="../assets/image/empilhadeira.jpg"
-              class="img-fluid d-block w-100" alt="Pallets">
+              class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Profissionais qualificados</h5>
                 <router-link class="btn btn-info" to="/formulario">Faça um orçamento</router-link>
               </div>
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
               <img src="../assets/image/estoque-externo-1.jpg"
-              class="img-fluid d-block w-100" alt="Pallets">
+              class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Maior empresa do Litoral Paulista</h5>
                 <router-link class="btn btn-info" to="/formulario">Faça um orçamento</router-link>
               </div>
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
               <img src="../assets/image/estoque-externo-2.jpg"
-              class="img-fluid d-block w-100" alt="Pallets">
+              class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Produtos a pronta entrega</h5>
                 <router-link class="btn btn-info" to="/formulario">Faça um orçamento</router-link>
               </div>
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
               <img src="../assets/image/exportacao.jpg"
-              class="img-fluid d-block w-100" alt="Pallets">
+              class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Há mais de 15 anos exportando para o mundo</h5>
                 <router-link class="btn btn-white"
                 to="/formulario">Faça um orçamento</router-link>
               </div>
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
               <img src="../assets/image/caminhoes.jpg"
-              class="img-fluid d-block w-100" alt="Pallets">
+              class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Frete gratuíto para o estado de São Paulo</h5>
                 <router-link class="btn btn-white"
@@ -86,7 +84,7 @@
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev"
+          <button class="carousel-control-prev custom-color"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
@@ -100,7 +98,7 @@
             Previous
           </span>
           </button>
-          <button class="carousel-control-next"
+          <button class="carousel-control-next custom-color"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
@@ -132,8 +130,8 @@ export default {
 </script>
 
 <style scoped>
-  .img-fluid {
-    margin-top: 170px;
+  img {
+    margin-top: 100px;
   }
   .btn {
     color: #F35A04;
@@ -146,16 +144,42 @@ export default {
   .btn:hover {
     background: #F35A04;
   }
-  .carousel-caption {
-    bottom: 3em;
-  }
   .carousel-caption h5 {
     font-size: 2.5em;
-    text-shadow: #000 2px 2px
+    text-shadow: #000 2px 2px;
   }
   .carousel-control-prev,
-  .carousel-control-next-icon {
-    color: #111;
-    font-size: 6em;
+  .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .carousel-control-prev.custom-color,
+  .carousel-control-next.custom-color {
+    height: 1em;
+    width: 1em;
+    color:rgb(255, 0, 0);
+    font-size: 3em;
+  }
+  @media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: 60%;
+      transform: translateY(-50%);
+    }
+    .carousel-caption h5 {
+      font-size: 1em;
+      text-shadow: #000 1px 1px;
+    }
+    .btn {
+      color: #F35A04;
+      background: rgb(229, 225, 225);
+      border-radius: 0;
+      padding: 0.3 0.8em;
+      font-size: 0.6em;
+      margin-top: 0.6em;
+    }
+    .container {
+      padding: 0;
+    }
   }
 </style>

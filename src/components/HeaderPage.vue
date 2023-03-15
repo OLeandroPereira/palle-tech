@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-md fixed-top bg-dark" id="navbar">
-    <div class="container py-3">
+    <div class="container">
       <router-link to="/" class="navbar-brand">
-      <img src="../assets/image/logo3.png" alt="Palle-Tech" style="width: 150px;"/>
+      <img src="../assets/image/logo3.png" alt="Palle-Tech" style="width: 90px;"/>
       </router-link>
       <button
         class="navbar-toggler"
@@ -14,11 +14,11 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbar-items">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse justify-content-center" id="navbar-items">
+        <ul class="navbar-nav mb-2 mb-lg-0">
           <router-link to="/" class="nav-link"
           aria-current="page" exact-active-class="active">Empresa<span
           class="underline"></span></router-link>
@@ -58,10 +58,6 @@ export default {
 </script>
 
 <style scoped>
-  #navbar-items {
-    display: flex;
-    justify-content: center;
-  }
   .navbar {
     border-bottom: 1px solid #F35A04;
   }
@@ -79,12 +75,12 @@ export default {
     background: #FFF9;
   }
   .underline {
-  display: block;
-  height: 3px;
-  background: linear-gradient(to right, #ff4d4d, #ff9800);
-  transform: scaleX(0);
-  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
-}
+    display: block;
+    height: 3px;
+    background: linear-gradient(to right, #ff4d4d, #ff9800);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+  }
 @media screen and (max-width: 767px) {
   .underline {
     display: none;
