@@ -46,7 +46,13 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Profissionais qualificados</h5>
-                <router-link class="btn btn-info" to="/formulario">Faça um orçamento</router-link>
+                <router-link class="btn btn-info" to="/formulario"
+                @click="redirectToForm">Faça um orçamento</router-link>
+                <div v-if="showLoading" class="loading">
+                  <div v-show="showLoading" class="overlay">
+                    <div class="loader"></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
@@ -54,15 +60,27 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Maior empresa do Litoral Paulista</h5>
-                <router-link class="btn btn-info" to="/formulario">Faça um orçamento</router-link>
-              </div>
+                <router-link class="btn btn-info" to="/formulario"
+                @click="redirectToForm">Faça um orçamento</router-link>
+                <div v-if="showLoading" class="loading">
+                  <div v-show="showLoading" class="overlay">
+                    <div class="loader"></div>
+                  </div>
+                </div>
+              </div >
             </div>
             <div class="carousel-item">
               <img src="../assets/image/estoque-externo-2.jpg"
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Produtos a pronta entrega</h5>
-                <router-link class="btn btn-info" to="/formulario">Faça um orçamento</router-link>
+                <router-link class="btn btn-info" to="/formulario"
+                @click="redirectToForm">Faça um orçamento</router-link>
+                <div v-if="showLoading" class="loading">
+                  <div v-show="showLoading" class="overlay">
+                    <div class="loader"></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
@@ -70,8 +88,13 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Há mais de 15 anos exportando para o mundo</h5>
-                <router-link class="btn btn-white"
-                to="/formulario">Faça um orçamento</router-link>
+                <router-link class="btn btn-info" to="/formulario"
+                @click="redirectToForm">Faça um orçamento</router-link>
+                <div v-if="showLoading" class="loading">
+                  <div v-show="showLoading" class="overlay">
+                    <div class="loader"></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
@@ -79,12 +102,17 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Frete gratuíto para o estado de São Paulo</h5>
-                <router-link class="btn btn-white"
-                to="/formulario">Faça um orçamento</router-link>
+                <router-link class="btn btn-info" to="/formulario"
+                @click="redirectToForm">Faça um orçamento</router-link>
+                <div v-if="showLoading" class="loading">
+                  <div v-show="showLoading" class="overlay">
+                    <div class="loader"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev custom-color"
+          <button class="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
@@ -98,7 +126,7 @@
             Previous
           </span>
           </button>
-          <button class="carousel-control-next custom-color"
+          <button class="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
@@ -114,6 +142,7 @@
           </button>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -125,6 +154,22 @@ export default {
   name: 'EmpresaView',
   components: {
     HeaderPage,
+  },
+  data() {
+    return {
+      showLoading: false,
+    };
+  },
+  methods: {
+    redirectToForm() {
+      this.$router.push('/formulario');
+    },
+  },
+  beforeRouteLeave(to, from, next) {
+    this.showLoading = true;
+    setTimeout(() => {
+      next();
+    }, 700);
   },
 };
 </script>
@@ -153,12 +198,42 @@ export default {
     top: 50%;
     transform: translateY(-50%);
   }
-  .carousel-control-prev.custom-color,
-  .carousel-control-next.custom-color {
+  .carousel-control-prev,
+  .carousel-control-next {
     height: 1em;
     width: 1em;
-    color:rgb(255, 0, 0);
     font-size: 3em;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  /* CSS do loader */
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
   @media (max-width: 768px) {
     .carousel-control-prev,
