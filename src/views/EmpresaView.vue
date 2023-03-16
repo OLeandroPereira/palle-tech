@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="container">
-      <HeaderPage />
       <div class="banner">
         <div id="carouselExampleIndicators"
         class="carousel slide"
@@ -148,13 +147,8 @@
 </template>
 
 <script>
-import HeaderPage from '@/components/HeaderPage.vue';
-
 export default {
   name: 'EmpresaView',
-  components: {
-    HeaderPage,
-  },
   data() {
     return {
       showLoading: false,

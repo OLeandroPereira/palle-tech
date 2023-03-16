@@ -1,6 +1,5 @@
 <template>
   <div>
-    <headerPage />
     <div v-if="showLoading" class="loading">
       <div v-show="showLoading" class="overlay">
         <div class="loader"></div>
@@ -10,13 +9,8 @@
 </template>
 
 <script>
-import HeaderPage from '@/components/HeaderPage.vue';
-
 export default {
   name: 'SobreView',
-  components: {
-    HeaderPage,
-  },
   data() {
     return {
       showLoading: false,

@@ -1,18 +1,23 @@
 <template>
   <div id="app">
+    <nav>
+      <HeaderPage />
+    </nav>
     <div :class="{ loading: isLoading }">
       <div class="spinner"></div>
       <p>Carregando...</p>
     </div>
-    <nav>
-      <HeaderPage />
-    </nav>
     <router-view/>
   </div>
 </template>
 
 <script>
+import HeaderPage from './components/HeaderPage.vue';
+
 export default {
+  components: {
+    HeaderPage,
+  },
   data() {
     return {
       isLoading: false,
