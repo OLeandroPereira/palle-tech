@@ -162,7 +162,7 @@ export default {
   },
   methods: {
     redirectToForm() {
-      this.$router.push('/formulario');
+      this.showLoading = true;
     },
   },
   beforeRouteLeave(to, from, next) {

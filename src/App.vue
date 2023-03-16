@@ -1,11 +1,37 @@
 <template>
   <div id="app">
+    <div :class="{ loading: isLoading }">
+      <div class="spinner"></div>
+      <p>Carregando...</p>
+    </div>
     <nav>
-      <headerPage />
+      <HeaderPage />
     </nav>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isLoading: false,
+    };
+  },
+  methods: {
+    fetchData() {
+      console.log('teste');
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 900);
+    },
+  },
+  mounted() {
+    this.fetchData();
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -22,5 +48,14 @@ a {
   &.router-link-exact-active {
     color: #d1d1dd;
   }
+}
+.loading {
+  position: relative;
+}
+.loading .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

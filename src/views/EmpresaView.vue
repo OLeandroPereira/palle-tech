@@ -162,7 +162,7 @@ export default {
   },
   methods: {
     redirectToForm() {
-      this.$router.push('/formulario');
+      this.showLoading = true;
     },
   },
   beforeRouteLeave(to, from, next) {
@@ -176,7 +176,7 @@ export default {
 
 <style scoped>
   img {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .btn {
     color: #F35A04;
