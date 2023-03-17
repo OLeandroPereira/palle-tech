@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import EmpresaView from '../views/EmpresaView.vue';
 import FormularioView from '../views/FormularioView.vue';
-import CadastroPage from '../views/CadastroPage.vue';
+import CadastroView from '../views/CadastroView.vue';
 import SobreView from '../views/SobreView.vue';
 
 Vue.use(VueRouter);
@@ -21,7 +21,7 @@ const routes = [
   {
     path: '/cadastro',
     name: 'cadastro',
-    component: CadastroPage,
+    component: CadastroView,
   },
   {
     path: '/sobre',

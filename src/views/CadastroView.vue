@@ -148,7 +148,7 @@
 
 <script>
 export default {
-  name: 'CadastroPage',
+  name: 'CadastroView',
   data() {
     return {
       showLoading: false,
@@ -169,9 +169,6 @@ export default {
 </script>
 
 <style scoped>
-  img {
-    margin-top: 100px;
-  }
   .btn {
     color: #F35A04;
     background: rgb(229, 225, 225);
@@ -249,6 +246,12 @@ export default {
     }
     .container {
       padding: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .loader {
+      width: 80px;
+      height: 80px;
     }
   }
 </style>

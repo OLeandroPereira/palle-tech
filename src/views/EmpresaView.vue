@@ -45,7 +45,7 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Profissionais qualificados</h5>
-                <router-link class="btn btn-info" to="/formulario"
+                <router-link class="btn" to="/formulario"
                 @click="redirectToForm">Faça um orçamento</router-link>
                 <div v-if="showLoading" class="loading">
                   <div v-show="showLoading" class="overlay">
@@ -59,7 +59,7 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Maior empresa do Litoral Paulista</h5>
-                <router-link class="btn btn-info" to="/formulario"
+                <router-link class="btn" to="/formulario"
                 @click="redirectToForm">Faça um orçamento</router-link>
                 <div v-if="showLoading" class="loading">
                   <div v-show="showLoading" class="overlay">
@@ -73,7 +73,7 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Produtos a pronta entrega</h5>
-                <router-link class="btn btn-info" to="/formulario"
+                <router-link class="btn" to="/formulario"
                 @click="redirectToForm">Faça um orçamento</router-link>
                 <div v-if="showLoading" class="loading">
                   <div v-show="showLoading" class="overlay">
@@ -87,7 +87,7 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Há mais de 15 anos exportando para o mundo</h5>
-                <router-link class="btn btn-info" to="/formulario"
+                <router-link class="btn" to="/formulario"
                 @click="redirectToForm">Faça um orçamento</router-link>
                 <div v-if="showLoading" class="loading">
                   <div v-show="showLoading" class="overlay">
@@ -101,7 +101,7 @@
               class="img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Frete gratuíto para o estado de São Paulo</h5>
-                <router-link class="btn btn-info" to="/formulario"
+                <router-link class="btn" to="/formulario"
                 @click="redirectToForm">Faça um orçamento</router-link>
                 <div v-if="showLoading" class="loading">
                   <div v-show="showLoading" class="overlay">
@@ -169,9 +169,6 @@ export default {
 </script>
 
 <style scoped>
-  img {
-    margin-top: 50px;
-  }
   .btn {
     color: #F35A04;
     background: rgb(229, 225, 225);
@@ -249,6 +246,10 @@ export default {
     }
     .container {
       padding: 0;
+    }
+    .loader {
+      width: 80px;
+      height: 80px;
     }
   }
 </style>

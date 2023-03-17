@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1>This is an about page</h1>
-    <HelloWorld />
     <div v-if="showLoading" class="loading">
       <div v-show="showLoading" class="overlay">
         <div class="loader"></div>
@@ -11,13 +9,8 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
-
 export default {
-  name: 'FormularioView',
-  components: {
-    HelloWorld,
-  },
+  name: 'LoadingPage',
   data() {
     return {
       showLoading: false,
@@ -37,15 +30,7 @@ export default {
 };
 </script>
 
-<style scoped>
-  .btn {
-    color: #F35A04;
-    background: rgb(229, 225, 225);
-    border-radius: 0;
-    padding: 0.3 0.8em;
-    font-size: 1em;
-    margin-top: 1em;
-  }
+<style>
   .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;

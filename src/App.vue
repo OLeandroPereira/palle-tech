@@ -23,6 +23,9 @@ export default {
       isLoading: false,
     };
   },
+  mounted() {
+    this.fetchData();
+  },
   methods: {
     fetchData() {
       console.log('teste');
@@ -31,9 +34,6 @@ export default {
         this.isLoading = false;
       }, 900);
     },
-  },
-  mounted() {
-    this.fetchData();
   },
 };
 </script>

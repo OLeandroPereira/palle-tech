@@ -1,47 +1,21 @@
 <template>
   <div>
-    <div v-if="showLoading" class="loading">
-      <div v-show="showLoading" class="overlay">
-        <div class="loader"></div>
-      </div>
-    </div>
+    <LoadingPage />
   </div>
 </template>
 
 <script>
+import LoadingPage from '@/components/LoadingPage.vue';
+
 export default {
   name: 'SobreView',
-  data() {
-    return {
-      showLoading: false,
-    };
-  },
-  methods: {
-    redirectToForm() {
-      this.showLoading = true;
-    },
-  },
-  beforeRouteLeave(to, from, next) {
-    this.showLoading = true;
-    setTimeout(() => {
-      next();
-    }, 700);
+  components: {
+    LoadingPage,
   },
 };
 </script>
 
 <style scoped>
-  img {
-    margin-top: 100px;
-  }
-  .btn {
-    color: #F35A04;
-    background: rgb(229, 225, 225);
-    border-radius: 0;
-    padding: 0.3 0.8em;
-    font-size: 1em;
-    margin-top: 1em;
-  }
   .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -73,4 +47,10 @@ export default {
       transform: rotate(360deg);
     }
   }
+  @media screen and (max-width: 767px) {
+  .loader {
+    width: 80px;
+    height: 80px;
+  }
+}
 </style>

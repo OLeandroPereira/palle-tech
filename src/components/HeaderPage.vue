@@ -5,7 +5,7 @@
       <img src="../assets/image/logo3.png" alt="Palle-Tech" style="width: 90px;"/>
       </router-link>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler collapsed"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbar-items"
@@ -40,6 +40,16 @@
 <script>
 export default {
   name: 'HeaderPage',
+  methods: {
+    hideNavbar() {
+      const navbar = document.getElementById('navbar-items');
+      const navbarBtn = document.querySelector('.navbar-toggler');
+
+      navbar.setAttribute('aria-expanded', 'false');
+      navbar.classList.remove('show');
+      navbarBtn.classList.add('collapsed');
+    },
+  },
   mounted() {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach((link) => {
@@ -51,6 +61,10 @@ export default {
 
       link.addEventListener('mouseout', () => {
         underline.style.transform = 'scaleX(0)';
+      });
+
+      link.addEventListener('click', () => {
+        this.hideNavbar();
       });
     });
   },
