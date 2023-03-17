@@ -247,8 +247,6 @@ export default {
     .container {
       padding: 0;
     }
-  }
-  @media screen and (max-width: 767px) {
     .loader {
       width: 80px;
       height: 80px;
