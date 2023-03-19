@@ -14,7 +14,6 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-      <span class="sr-only"></span>
       <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -96,44 +95,44 @@ export default {
     transition: transform 0.3s ease-out, background-color 0.3s ease-out;
   }
   .navbar-toggler-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  top: 3px;
-  cursor: pointer;
-}
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+  }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-  position: absolute;
-  left: 0;
-}
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+  }
 
-.navbar-toggler-icon::before {
-  top: -6px;
-  transform: rotate(45deg);
-}
+  .navbar-toggler-icon::before {
+    top: -6px;
+    transform: rotate(45deg);
+  }
 
-.navbar-toggler-icon::after {
-  top: 6px;
-  transform: rotate(-45deg);
-}
+  .navbar-toggler-icon::after {
+    top: 6px;
+    transform: rotate(-45deg);
+  }
 
-.navbar-toggler.collapsed .navbar-toggler-icon::before {
-  top: 0;
-  transform: rotate(0);
-}
+  .navbar-toggler.collapsed .navbar-toggler-icon::before {
+    top: 0;
+    transform: rotate(0);
+  }
 
-.navbar-toggler.collapsed .navbar-toggler-icon::after {
-  top: 0;
-  transform: rotate(0);
-}
+  .navbar-toggler.collapsed .navbar-toggler-icon::after {
+    top: 0;
+    transform: rotate(0);
+  }
 
 @media screen and (max-width: 767px) {
   .underline {
