@@ -5,7 +5,7 @@
       <img src="../assets/image/logo3.png" alt="Palle-Tech" style="width: 90px;"/>
       </router-link>
       <button
-        class="navbar-toggler collapsed mobile-menu-button"
+        class="navbar-toggler collapsed"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbar-items"
@@ -14,7 +14,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-      <span class="navbar-toggler-icon"></span>
+      <span class="sr-only"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-center" id="navbar-items">
@@ -84,9 +84,6 @@ export default {
   .nav-link:hover {
     color: #FFF9;
   }
-  .nav-link.active {
-    background: #FFF9;
-  }
   .underline {
     display: block;
     height: 3px;
@@ -94,17 +91,17 @@ export default {
     transform: scaleX(0);
     transition: transform 0.3s ease-out, background-color 0.3s ease-out;
   }
-  .navbar-toggler-icon {
+  .sr-only {
     display: inline-block;
     width: 20px;
     height: 20px;
     position: relative;
-    top: 3px;
+    top: 8px;
     cursor: pointer;
   }
 
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after {
+  .sr-only::before,
+  .sr-only::after {
     content: '';
     display: block;
     width: 100%;
@@ -114,22 +111,21 @@ export default {
     left: 0;
   }
 
-  .navbar-toggler-icon::before {
-    top: -6px;
+  .sr-only::before {
+    top: 4px;
     transform: rotate(45deg);
   }
 
-  .navbar-toggler-icon::after {
-    top: 6px;
+  .sr-only::after {
+    top: 4px;
     transform: rotate(-45deg);
   }
 
-  .navbar-toggler.collapsed .navbar-toggler-icon::before {
-    top: 0;
+  .navbar-toggler.collapsed .sr-only::before {
     transform: rotate(0);
   }
 
-  .navbar-toggler.collapsed .navbar-toggler-icon::after {
+  .navbar-toggler.collapsed .sr-only::after {
     top: 0;
     transform: rotate(0);
   }
