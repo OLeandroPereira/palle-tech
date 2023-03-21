@@ -28,12 +28,13 @@
           <router-link to="/cadastro"
           class="nav-link" exact-active-class="active">Cadastro<span
           class="underline"></span></router-link>
-          <router-link to="/sobre"
-          class="nav-link" exact-active-class="active">Sobre nós<span
+          <router-link to="/sobre-nos"
+          class="nav-link" exact-active-class="active" scroll-to="#sobre-nos">Sobre nós<span
           class="underline"></span></router-link>
         </ul>
       </div>
     </div>
+    <sobre-view />
   </nav>
 </template>
 
@@ -84,7 +85,7 @@ export default {
   .nav-link:hover {
     color: #FFF9;
   }
-  .underline {
+    .underline {
     display: block;
     height: 3px;
     background: linear-gradient(to right, #ff4d4d, #ff9800);

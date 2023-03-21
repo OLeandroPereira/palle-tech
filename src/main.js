@@ -1,3 +1,4 @@
+import SmoothScroll from 'smooth-scroll';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -6,6 +7,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 
 Vue.config.productionTip = false;
+
+// eslint-disable-next-line
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 800,
+  speedAsDuration: true,
+});
 
 new Vue({
   router,

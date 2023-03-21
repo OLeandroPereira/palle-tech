@@ -141,17 +141,8 @@
           </button>
         </div>
       </div>
-      <div class="sobre-nos">
-        <h2>Sobre nós</h2>
-        <p>
-          Nós somos uma empresa de pallets fundada em 14 de novembro de 2003.
-          Com profissionais qualificados, exportamos há 15 anos para o mundo.
-          Começamos em um quintal, no fundo de uma casa, alugando pallets.
-          Ao longo dos anos, nos tornamos a maior empresa exportadora de pallets do Brasil.
-          Temos estoque a pronta entrega e oferecemos frete gratuito para o estado de São Paulo.
-        </p>
-      </div>
     </div>
+    <SobreView />
   </div>
 </template>
 

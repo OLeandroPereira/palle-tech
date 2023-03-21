@@ -22,12 +22,13 @@ export default {
 <style scoped>
 #sobre-nos {
   padding: 50px 0;
-  background-color: #f9f9f9;
 }
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 940px;
+  margin: 30px auto 0px;
+  padding: 10px;
+  text-align: left;
+  box-shadow: #c7bebe 2px 2px 2px 2px;
 }
 h2 {
   font-size: 32px;
