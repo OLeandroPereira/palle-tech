@@ -10,18 +10,15 @@
       </div>
     </div>
     <router-view/>
-    <sobre-view id="sobre"></sobre-view>
   </div>
 </template>
 
 <script>
 import HeaderPage from './components/HeaderPage.vue';
-import SobreView from './views/SobreView.vue';
 
 export default {
   components: {
     HeaderPage,
-    SobreView,
   },
 };
 </script>

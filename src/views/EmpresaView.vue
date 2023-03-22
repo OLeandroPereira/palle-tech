@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div>
       <div class="banner">
         <div id="carouselExampleIndicators"
         class="carousel slide"
@@ -42,7 +42,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="../assets/image/empilhadeira.jpg"
-              class="img-fluid" alt="Pallets">
+              class="w-75 img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Profissionais qualificados</h5>
                 <router-link class="btn" to="/formulario"
@@ -56,7 +56,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/estoque-externo-1.jpg"
-              class="img-fluid" alt="Pallets">
+              class="w-75 img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Maior empresa do Litoral Paulista</h5>
                 <router-link class="btn" to="/formulario"
@@ -70,7 +70,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/estoque-externo-2.jpg"
-              class="img-fluid" alt="Pallets">
+              class="w-75 img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Produtos a pronta entrega</h5>
                 <router-link class="btn" to="/formulario"
@@ -84,7 +84,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/exportacao.jpg"
-              class="img-fluid" alt="Pallets">
+              class="w-75 img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Há mais de 15 anos exportando para o mundo</h5>
                 <router-link class="btn" to="/formulario"
@@ -98,57 +98,63 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/caminhoes.jpg"
-              class="img-fluid" alt="Pallets">
+              class="w-75 img-fluid" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Frete gratuíto para o estado de São Paulo</h5>
-                <router-link class="btn" to="/formulario"
-                @click="redirectToForm">Faça um orçamento</router-link>
-                <div v-if="showLoading" class="loading">
-                  <div v-show="showLoading" class="overlay">
-                    <div class="loader"></div>
+                <div class="btn-container"></div>
+                  <router-link class="btn" to="/formulario"
+                  @click="redirectToForm">Faça um orçamento</router-link>
+                  <div v-if="showLoading" class="loading">
+                    <div v-show="showLoading" class="overlay">
+                      <div class="loader"></div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <button class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"
+              aria-hidden="true"
+              >
+              </span>
+              <span class="visually-hidden"
+              >
+              Previous
+              </span>
+              </button>
+              <button class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+              >
+              <span class="carousel-control-next-icon"
+              aria-hidden="true"
+              >
+              </span>
+              <span class="visually-hidden"
+              >
+              Next
+              </span>
+              </button>
             </div>
           </div>
-          <button class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon"
-            aria-hidden="true"
-            >
-          </span>
-            <span class="visually-hidden"
-            >
-            Previous
-          </span>
-          </button>
-          <button class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon"
-            aria-hidden="true"
-            >
-          </span>
-            <span class="visually-hidden"
-            >
-            Next
-          </span>
-          </button>
         </div>
       </div>
-    </div>
     <SobreView />
   </div>
 </template>
 
 <script>
+import SobreView from './SobreView.vue';
+
 export default {
   name: 'EmpresaView',
+  components: {
+    SobreView,
+  },
   data() {
     return {
       showLoading: false,
@@ -169,6 +175,11 @@ export default {
 </script>
 
 <style scoped>
+  .btn-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
   .btn {
     color: #F35A04;
     background: rgb(229, 225, 225);
@@ -176,6 +187,8 @@ export default {
     padding: 0.3 0.8em;
     font-size: 1em;
     margin-top: 1em;
+    bottom: 10px;
+    right: 10px;
   }
   .btn:hover {
     background: #F35A04;
@@ -194,15 +207,13 @@ export default {
     height: 1em;
     width: 1em;
     font-size: 3em;
-  }
-  #sobre-nos {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .container {
-    max-width: 960px;
-    margin: 0 auto;
+    justify-content: center;
     text-align: center;
+    margin: auto;
   }
   h2 {
     font-size: 32px;

@@ -24,11 +24,11 @@ export default {
   padding: 50px 0;
 }
 .container {
-  max-width: 940px;
-  margin: 30px auto 0px;
-  padding: 10px;
   text-align: left;
   box-shadow: #c7bebe 2px 2px 2px 2px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 h2 {
   font-size: 32px;
@@ -38,5 +38,10 @@ p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 400px;
+  }
 }
 </style>
