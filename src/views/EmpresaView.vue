@@ -42,7 +42,7 @@
           <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="../assets/image/empilhadeira.jpg"
-            class="image-company w-75" alt="Pallets">
+            class="image-company" alt="Pallets">
             <div class="carousel-caption">
               <h5>Profissionais qualificados</h5>
               <router-link class="btn" to="/formulario"
@@ -56,7 +56,7 @@
           </div>
           <div class="carousel-item">
             <img src="../assets/image/estoque-externo-1.jpg"
-            class="image-company w-75" alt="Pallets">
+            class="image-company" alt="Pallets">
             <div class="carousel-caption">
               <h5>Maior empresa do Litoral Paulista</h5>
               <router-link class="btn" to="/formulario"
@@ -70,7 +70,7 @@
           </div>
           <div class="carousel-item">
             <img src="../assets/image/estoque-externo-2.jpg"
-            class="image-company w-75" alt="Pallets">
+            class="image-company" alt="Pallets">
             <div class="carousel-caption">
               <h5>Produtos a pronta entrega</h5>
               <router-link class="btn" to="/formulario"
@@ -84,7 +84,7 @@
           </div>
           <div class="carousel-item">
             <img src="../assets/image/exportacao.jpg"
-            class="image-company w-75" alt="Pallets">
+            class="image-company" alt="Pallets">
             <div class="carousel-caption">
               <h5>Há mais de 15 anos exportando para o mundo</h5>
               <router-link class="btn" to="/formulario"
@@ -98,7 +98,7 @@
           </div>
           <div class="carousel-item">
             <img src="../assets/image/caminhoes.jpg"
-            class="image-company w-75" alt="Pallets">
+            class="image-company" alt="Pallets">
             <div class="carousel-caption">
               <h5>Frete gratuíto para o estado de São Paulo</h5>
               <div class="btn-container"></div>
@@ -180,6 +180,7 @@ export default {
   }
   .image-company {
     margin-bottom: 2em;
+    width: 75%;
   }
   .btn-container {
     position: absolute;
@@ -189,7 +190,7 @@ export default {
   .btn {
     color: rgb(229, 225, 225);
     background: #F35A04;
-    border-radius: 0;
+    border-radius: 20px;
     padding: 0.3 0.8em;
     font-size: 1em;
     margin-top: 1em;
@@ -223,11 +224,6 @@ export default {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .container {
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-  }
   h2 {
     font-size: 32px;
     margin-bottom: 30px;
@@ -239,8 +235,7 @@ export default {
   }
   @media (max-width: 768px) {
     .image-company {
-      text-align: center;
-      width: 100% !important;
+      width: 100%;
     }
     .carousel-control-prev,
     .carousel-control-next {
@@ -254,7 +249,7 @@ export default {
     .btn {
       color: rgb(229, 225, 225);
       background: #F35A04;
-      border-radius: 0;
+      border-radius: 20px;
       padding: 0.1 0.2em;
       font-size: 0.8em;
       margin-top: 0.3em;
@@ -270,9 +265,10 @@ export default {
     .carousel-control-next {
       height: 2em;
       width: 2em;
-      font-size: 0.8em;
+      font-size: 1.2em;
       border-radius: 50%;
       background-color: rgba(0, 0, 0, 0.5);
+      top: 50%;
     }
     .carousel-caption {
       bottom: 2.5em;

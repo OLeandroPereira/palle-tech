@@ -1,6 +1,6 @@
 <template>
   <section id="sobre-nos">
-    <div class="container w-75">
+    <div class="container">
       <div class="row">
         <div class="description col-12 col-lg-6">
           <div class="company-info col-12 col-lg-9">
@@ -38,6 +38,9 @@ export default {
   section #sobre-nos {
   text-align: center;
 }
+.container {
+  width: 75%;
+}
 .description {
   color: rgb(119, 111, 111);
 }
@@ -67,19 +70,51 @@ p {
 }
 @media (max-width: 960px) {
   .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    box-shadow: none;
     padding: 0px;
+    margin: 0px;
+    background-image: url('../assets/image/fundador-palle-tech.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
   .img-fluid {
-    padding: 10px;
+    display: none;
+  }
+  h2 {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #F35A04;
+    z-index: 2;
   }
   p {
+    position: relative;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 0px;
+    color: rgb(229, 225, 225);
+    z-index: 2;
   }
   .company-info {
     justify-content: center;
-    width: 75%;
+    width: 100%;
+    padding: 20px;
   }
 }
 </style>
