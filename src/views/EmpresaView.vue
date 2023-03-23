@@ -56,7 +56,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/estoque-externo-1.jpg"
-              class="w-75" alt="Pallets">
+              class="image-company w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Maior empresa do Litoral Paulista</h5>
                 <router-link class="btn" to="/formulario"
@@ -70,7 +70,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/estoque-externo-2.jpg"
-              class="w-75" alt="Pallets">
+              class="image-company w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Produtos a pronta entrega</h5>
                 <router-link class="btn" to="/formulario"
@@ -84,7 +84,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/exportacao.jpg"
-              class="w-75" alt="Pallets">
+              class="image-company w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Há mais de 15 anos exportando para o mundo</h5>
                 <router-link class="btn" to="/formulario"
@@ -98,7 +98,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/caminhoes.jpg"
-              class="w-75" alt="Pallets">
+              class="image-company w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Frete gratuíto para o estado de São Paulo</h5>
                 <div class="btn-container"></div>
@@ -177,6 +177,9 @@ export default {
 <style scoped>
   .banner {
     text-align: center;
+  }
+  .image-company {
+    margin-bottom: 2em;
   }
   .btn-container {
     position: absolute;
