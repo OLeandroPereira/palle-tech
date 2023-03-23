@@ -1,9 +1,9 @@
 <template>
   <section id="sobre-nos">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <div class="description col-12 col-lg-6">
-          <div class="company-info col-12 col-lg-6">
+          <div class="company-info col-12 col-lg-9">
             <h2>Sobre nós</h2>
             <p>
               O senhor Antônio é um empreendedor apaixonado por madeiras e
@@ -17,7 +17,7 @@
             </p>
           </div>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="company-img col-12 col-lg-6  mb-sm-1">
           <img src="../assets/image/fundador-palle-tech.jpg"
             class="img-fluid"
             alt="Fundador-Palle-Tech"
@@ -44,13 +44,16 @@ export default {
 .container {
   text-align: left;
   box-shadow: #c7bebe 2px 2px 2px 2px;
-  padding: 10px;
   display: flex;
   background: rgba(221, 211, 211, 0.152);
+  margin-bottom: 20px;
 }
 .company-info {
   margin: 30px auto 0px;
-  width: 50%;
+  text-align: justify;
+}
+.company-img {
+  margin: 30px auto 0px;
   text-align: justify;
 }
 h2 {
@@ -63,9 +66,16 @@ p {
   line-height: 1.5;
 }
 @media (max-width: 960px) {
+  .container {
+    padding: 0px;
+  }
+  .img-fluid {
+    padding: 10px;
+  }
   p {
     font-size: 16px;
     line-height: 1.5;
+    margin-bottom: 0px;
   }
   .company-info {
     justify-content: center;

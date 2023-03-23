@@ -3,8 +3,8 @@
     <div>
       <div class="banner mt-5">
         <div id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="carousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
         >
           <div class="carousel-indicators d-none d-md-block">
             <button type="button"
@@ -40,11 +40,68 @@
             </button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../assets/image/empilhadeira.jpg"
-              class="image-company w-75" alt="Pallets">
-              <div class="carousel-caption">
-                <h5>Profissionais qualificados</h5>
+          <div class="carousel-item active">
+            <img src="../assets/image/empilhadeira.jpg"
+            class="image-company w-75" alt="Pallets">
+            <div class="carousel-caption">
+              <h5>Profissionais qualificados</h5>
+              <router-link class="btn" to="/formulario"
+              @click="redirectToForm">Faça um orçamento</router-link>
+              <div v-if="showLoading" class="loading">
+                <div v-show="showLoading" class="overlay">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/image/estoque-externo-1.jpg"
+            class="image-company w-75" alt="Pallets">
+            <div class="carousel-caption">
+              <h5>Maior empresa do Litoral Paulista</h5>
+              <router-link class="btn" to="/formulario"
+              @click="redirectToForm">Faça um orçamento</router-link>
+              <div v-if="showLoading" class="loading">
+                <div v-show="showLoading" class="overlay">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div >
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/image/estoque-externo-2.jpg"
+            class="image-company w-75" alt="Pallets">
+            <div class="carousel-caption">
+              <h5>Produtos a pronta entrega</h5>
+              <router-link class="btn" to="/formulario"
+              @click="redirectToForm">Faça um orçamento</router-link>
+              <div v-if="showLoading" class="loading">
+                <div v-show="showLoading" class="overlay">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/image/exportacao.jpg"
+            class="image-company w-75" alt="Pallets">
+            <div class="carousel-caption">
+              <h5>Há mais de 15 anos exportando para o mundo</h5>
+              <router-link class="btn" to="/formulario"
+              @click="redirectToForm">Faça um orçamento</router-link>
+              <div v-if="showLoading" class="loading">
+                <div v-show="showLoading" class="overlay">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/image/caminhoes.jpg"
+            class="image-company w-75" alt="Pallets">
+            <div class="carousel-caption">
+              <h5>Frete gratuíto para o estado de São Paulo</h5>
+              <div class="btn-container"></div>
                 <router-link class="btn" to="/formulario"
                 @click="redirectToForm">Faça um orçamento</router-link>
                 <div v-if="showLoading" class="loading">
@@ -54,96 +111,39 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <img src="../assets/image/estoque-externo-1.jpg"
-              class="image-company w-75" alt="Pallets">
-              <div class="carousel-caption">
-                <h5>Maior empresa do Litoral Paulista</h5>
-                <router-link class="btn" to="/formulario"
-                @click="redirectToForm">Faça um orçamento</router-link>
-                <div v-if="showLoading" class="loading">
-                  <div v-show="showLoading" class="overlay">
-                    <div class="loader"></div>
-                  </div>
-                </div>
-              </div >
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/image/estoque-externo-2.jpg"
-              class="image-company w-75" alt="Pallets">
-              <div class="carousel-caption">
-                <h5>Produtos a pronta entrega</h5>
-                <router-link class="btn" to="/formulario"
-                @click="redirectToForm">Faça um orçamento</router-link>
-                <div v-if="showLoading" class="loading">
-                  <div v-show="showLoading" class="overlay">
-                    <div class="loader"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/image/exportacao.jpg"
-              class="image-company w-75" alt="Pallets">
-              <div class="carousel-caption">
-                <h5>Há mais de 15 anos exportando para o mundo</h5>
-                <router-link class="btn" to="/formulario"
-                @click="redirectToForm">Faça um orçamento</router-link>
-                <div v-if="showLoading" class="loading">
-                  <div v-show="showLoading" class="overlay">
-                    <div class="loader"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/image/caminhoes.jpg"
-              class="image-company w-75" alt="Pallets">
-              <div class="carousel-caption">
-                <h5>Frete gratuíto para o estado de São Paulo</h5>
-                <div class="btn-container"></div>
-                  <router-link class="btn" to="/formulario"
-                  @click="redirectToForm">Faça um orçamento</router-link>
-                  <div v-if="showLoading" class="loading">
-                    <div v-show="showLoading" class="overlay">
-                      <div class="loader"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev"
+            <button class="carousel-control-prev"
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide="prev"
             >
-              <span class="carousel-control-prev-icon"
+            <span class="carousel-control-prev-icon"
               aria-hidden="true"
-              >
-              </span>
-              <span class="visually-hidden"
-              >
+            >
+            </span>
+            <span class="visually-hidden"
+            >
               Previous
-              </span>
-              </button>
-              <button class="carousel-control-next"
+            </span>
+            </button>
+            <button class="carousel-control-next"
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide="next"
-              >
-              <span class="carousel-control-next-icon"
+            >
+            <span class="carousel-control-next-icon"
               aria-hidden="true"
-              >
-              </span>
-              <span class="visually-hidden"
-              >
+            >
+            </span>
+            <span class="visually-hidden"
+            >
               Next
-              </span>
-              </button>
-            </div>
+            </span>
+            </button>
           </div>
+          <SobreView />
         </div>
       </div>
-    <SobreView />
+    </div>
   </div>
 </template>
 
@@ -187,8 +187,8 @@ export default {
     right: 0;
   }
   .btn {
-    color: #F35A04;
-    background: rgb(229, 225, 225);
+    color: rgb(229, 225, 225);
+    background: #F35A04;
     border-radius: 0;
     padding: 0.3 0.8em;
     font-size: 1em;
@@ -197,7 +197,7 @@ export default {
     right: 10px;
   }
   .btn:hover {
-    background: #F35A04;
+    background: #bc4b0a;
   }
   .carousel-indicators {
     margin-bottom: 4em;
@@ -248,15 +248,15 @@ export default {
       transform: translateY(-50%);
     }
     .carousel-caption h5 {
-      font-size: 0.7em;
+      font-size: 1.5em;
       text-shadow: #000 1px 1px;
     }
     .btn {
-      color: #F35A04;
-      background: rgb(229, 225, 225);
+      color: rgb(229, 225, 225);
+      background: #F35A04;
       border-radius: 0;
       padding: 0.1 0.2em;
-      font-size: 0.4em;
+      font-size: 0.8em;
       margin-top: 0.3em;
     }
     .loader {
@@ -266,8 +266,16 @@ export default {
     .carousel-indicators {
       margin-bottom: 0.6em;
     }
+    .carousel-control-prev,
+    .carousel-control-next {
+      height: 2em;
+      width: 2em;
+      font-size: 0.8em;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
     .carousel-caption {
-      bottom: 1em;
+      bottom: 2.5em;
     }
     h2 {
     font-size: 24px;
