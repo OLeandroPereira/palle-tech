@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <div class="banner">
+      <div class="banner mt-5">
         <div id="carouselExampleIndicators"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -42,7 +42,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="../assets/image/empilhadeira.jpg"
-              class="w-75 img-fluid" alt="Pallets">
+              class="image-company w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Profissionais qualificados</h5>
                 <router-link class="btn" to="/formulario"
@@ -56,7 +56,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/estoque-externo-1.jpg"
-              class="w-75 img-fluid" alt="Pallets">
+              class="w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Maior empresa do Litoral Paulista</h5>
                 <router-link class="btn" to="/formulario"
@@ -70,7 +70,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/estoque-externo-2.jpg"
-              class="w-75 img-fluid" alt="Pallets">
+              class="w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Produtos a pronta entrega</h5>
                 <router-link class="btn" to="/formulario"
@@ -84,7 +84,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/exportacao.jpg"
-              class="w-75 img-fluid" alt="Pallets">
+              class="w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Há mais de 15 anos exportando para o mundo</h5>
                 <router-link class="btn" to="/formulario"
@@ -98,7 +98,7 @@
             </div>
             <div class="carousel-item">
               <img src="../assets/image/caminhoes.jpg"
-              class="w-75 img-fluid" alt="Pallets">
+              class="w-75" alt="Pallets">
               <div class="carousel-caption">
                 <h5>Frete gratuíto para o estado de São Paulo</h5>
                 <div class="btn-container"></div>
@@ -175,6 +175,9 @@ export default {
 </script>
 
 <style scoped>
+  .banner {
+    text-align: center;
+  }
   .btn-container {
     position: absolute;
     bottom: 0;
@@ -192,6 +195,13 @@ export default {
   }
   .btn:hover {
     background: #F35A04;
+  }
+  .carousel-indicators {
+    margin-bottom: 4em;
+  }
+  .carousel-caption {
+    padding: 0px;
+    bottom: 5.5em;
   }
   .carousel-caption h5 {
     font-size: 2.5em;
@@ -225,29 +235,45 @@ export default {
     margin-bottom: 30px;
   }
   @media (max-width: 768px) {
+    .image-company {
+      text-align: center;
+      width: 100% !important;
+    }
     .carousel-control-prev,
     .carousel-control-next {
       top: 60%;
       transform: translateY(-50%);
     }
     .carousel-caption h5 {
-      font-size: 1em;
+      font-size: 0.7em;
       text-shadow: #000 1px 1px;
     }
     .btn {
       color: #F35A04;
       background: rgb(229, 225, 225);
       border-radius: 0;
-      padding: 0.3 0.8em;
-      font-size: 0.6em;
-      margin-top: 0.6em;
-    }
-    .container {
-      padding: 0;
+      padding: 0.1 0.2em;
+      font-size: 0.4em;
+      margin-top: 0.3em;
     }
     .loader {
       width: 80px;
       height: 80px;
+    }
+    .carousel-indicators {
+      margin-bottom: 0.6em;
+    }
+    .carousel-caption {
+      bottom: 1em;
+    }
+    h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 30px;
     }
   }
 </style>

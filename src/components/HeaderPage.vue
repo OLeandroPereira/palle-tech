@@ -82,7 +82,7 @@ export default {
     text-transform: uppercase;
   }
   .nav-link:hover {
-    color: #FFF9;
+    color: rgba(229, 220, 220, 0.6);
   }
     .underline {
     display: block;
@@ -133,6 +133,9 @@ export default {
 @media screen and (max-width: 767px) {
   .underline {
     display: none;
+  }
+  .navbar-items {
+    margin-left: 0.5em;
   }
 }
 </style>
