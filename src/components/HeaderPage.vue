@@ -84,7 +84,7 @@ export default {
   .nav-link:hover {
     color: rgba(229, 220, 220, 0.6);
   }
-    .underline {
+  .underline {
     display: block;
     height: 3px;
     background: linear-gradient(to right, #ff4d4d, #ff9800);
@@ -108,7 +108,7 @@ export default {
     height: 2px;
     background-color: #000;
     position: absolute;
-    left: 0;
+    left: 0px;
   }
 
   .sr-only::before {
@@ -131,11 +131,14 @@ export default {
   }
 
 @media screen and (max-width: 767px) {
+  .container {
+    padding: 0px;
+  }
   .underline {
     display: none;
   }
-  .navbar-items {
-    margin-left: 0.5em;
+  .navbar .container {
+    justify-content: space-around;
   }
 }
 </style>

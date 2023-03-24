@@ -193,6 +193,7 @@ export default {
     border-radius: 20px;
     padding: 0.3 0.8em;
     font-size: 1em;
+    font-weight: 700;
     margin-top: 1em;
     bottom: 10px;
     right: 10px;
@@ -253,6 +254,7 @@ export default {
       padding: 0.1 0.2em;
       font-size: 0.8em;
       margin-top: 0.3em;
+      font-weight: 700;
     }
     .loader {
       width: 80px;

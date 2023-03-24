@@ -1,19 +1,18 @@
 <template>
-  <section id="sobre-nos">
+  <section class="row section-sobre" id="sobre-nos">
     <div class="container">
       <div class="row">
         <div class="description col-12 col-lg-6">
-          <div class="company-info col-12 col-lg-9">
+          <div class="company-info col-11 col-lg-9">
             <h2>Sobre nós</h2>
             <p>
-              O senhor Antônio é um empreendedor apaixonado por madeiras e
-              vislumbrou o potencial no mercado de pallets. Com sua expertise
-              no ramo, fundou a Palle-Tech e trabalhou incessantemente para
-              expandir a empresa e torná-la uma referência no setor. Os valores
-              da empresa incluem qualidade, ética e excelência no atendimento,
-              e são transmitidos pela cultura organizacional. A presença do senhor
-              Antônio é sentida em cada pallet produzido e na satisfação de cada
-              cliente atendido.
+              A Palle-Tech é uma empresa fundada pelo empreendedor Antônio,
+              que é apaixonado por madeiras e identificou um grande potencial
+              no mercado de pallets. Com vasta expertise no ramo, ele trabalhou
+              incansavelmente para expandir o negócio e transformá-lo em uma
+              referência no setor. Os valores fundamentais da empresa são
+              qualidade, ética e excelência no atendimento, e são transmitidos
+              por meio de sua cultura organizacional.
             </p>
           </div>
         </div>
@@ -38,6 +37,7 @@ export default {
   section #sobre-nos {
   text-align: center;
 }
+
 .container {
   width: 75%;
 }
@@ -69,6 +69,10 @@ p {
   line-height: 1.5;
 }
 @media (max-width: 960px) {
+  .section-sobre {
+    margin: 0px;
+    padding: 0px;
+  }
   .container {
     position: relative;
     width: 100%;
@@ -90,8 +94,11 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.697);
     z-index: 1;
+  }
+  .description {
+    padding: 0px;
   }
   .img-fluid {
     display: none;
@@ -105,7 +112,7 @@ p {
   }
   p {
     position: relative;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 0px;
     color: rgb(229, 225, 225);
@@ -113,8 +120,7 @@ p {
   }
   .company-info {
     justify-content: center;
-    width: 100%;
-    padding: 20px;
+    width: 80%;
   }
 }
 </style>
