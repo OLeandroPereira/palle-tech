@@ -28,8 +28,8 @@
           <router-link to="/cadastro"
           class="nav-link" exact-active-class="active">Cadastro<span
           class="underline"></span></router-link>
-          <router-link to="/sobre-nos"
-          class="nav-link" exact-active-class="active" scroll-to="#sobre-nos">Sobre nós<span
+          <router-link
+          class="nav-link" exact-active-class="active" to="#" @click="scrollToAbout">Sobre nós<span
           class="underline"></span></router-link>
         </ul>
       </div>
@@ -47,6 +47,13 @@ export default {
 
       navbar.classList.remove('show');
       navbarBtn.classList.add('collapsed');
+    },
+    scrollToAbout() {
+      const aboutSection = document.getElementById('sobre-nos');
+      window.scrollTo({
+        top: aboutSection.offsetTop,
+        behavior: 'smooth',
+      });
     },
   },
   mounted() {
