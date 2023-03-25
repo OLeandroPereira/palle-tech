@@ -29,7 +29,7 @@
           class="nav-link" exact-active-class="active">Cadastro<span
           class="underline"></span></router-link>
           <router-link
-          class="nav-link" exact-active-class="active" to="#" @click="scrollToAbout">Sobre nós<span
+          class="nav-link" exact-active-class="active" to="#sobre-nos">Sobre nós<span
           class="underline"></span></router-link>
         </ul>
       </div>
@@ -38,8 +38,13 @@
 </template>
 
 <script>
+import SobreView from '@/views/SobreView.vue';
+
 export default {
   name: 'HeaderPage',
+  component: {
+    SobreView,
+  },
   methods: {
     hideNavbar() {
       const navbar = document.getElementById('navbar-items');
@@ -47,13 +52,6 @@ export default {
 
       navbar.classList.remove('show');
       navbarBtn.classList.add('collapsed');
-    },
-    scrollToAbout() {
-      const aboutSection = document.getElementById('sobre-nos');
-      window.scrollTo({
-        top: aboutSection.offsetTop,
-        behavior: 'smooth',
-      });
     },
   },
   mounted() {

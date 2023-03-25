@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HeaderPage />
     <div>
       <div class="banner mt-5">
         <div id="carouselExampleIndicators"
@@ -148,12 +149,14 @@
 </template>
 
 <script>
+import HeaderPage from '@/components/HeaderPage.vue';
 import SobreView from './SobreView.vue';
 
 export default {
   name: 'EmpresaView',
   components: {
     SobreView,
+    HeaderPage,
   },
   data() {
     return {

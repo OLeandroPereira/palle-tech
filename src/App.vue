@@ -15,12 +15,10 @@
 
 <script>
 import HeaderPage from './components/HeaderPage.vue';
-import SobreView from './views/SobreView.vue';
 
 export default {
   components: {
     HeaderPage,
-    SobreView,
   },
 };
 </script>
