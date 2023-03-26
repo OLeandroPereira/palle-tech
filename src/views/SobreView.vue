@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="description col-12 col-lg-6">
-          <div class="company-info col-11 col-lg-9">
+          <div class="company-info col-11 col-lg-9
+            animate__animated animate__fadeInLeftBig"
+            >
             <h2>Sobre nós</h2>
             <p>
               A Palle-Tech é uma empresa fundada pelo empreendedor Antônio,
@@ -18,7 +20,7 @@
         </div>
         <div class="company-img col-12 col-lg-6  mb-sm-1">
           <img src="../assets/image/fundador-palle-tech.jpg"
-            class="img-fluid"
+            class="img-fluid animate__animated animate__fadeInRightBig"
             alt="Fundador-Palle-Tech"
           >
         </div>
