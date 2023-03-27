@@ -18,9 +18,10 @@
             </p>
           </div>
         </div>
-        <div class="company-img col-12 col-lg-6  mb-sm-1">
+        <div class="company-img col-12 col-lg-6  mb-sm-1
+        animate__animated animate__fadeInRightBig">
           <img src="../assets/image/fundador-palle-tech.jpg"
-            class="img-fluid animate__animated animate__fadeInRightBig"
+            class="img-fluid"
             alt="Fundador-Palle-Tech"
           >
         </div>
