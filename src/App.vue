@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <LoadingPage />
-    <nav>
       <HeaderPage />
-    </nav>
     <div v-if="showLoading" class="loading">
       <div v-show="showLoading" class="overlay">
         <div class="loader"></div>
