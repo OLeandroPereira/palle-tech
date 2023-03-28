@@ -104,7 +104,6 @@ export default {
     top: 8px;
     cursor: pointer;
   }
-
   .sr-only::before,
   .sr-only::after {
     content: '';
@@ -115,21 +114,17 @@ export default {
     position: absolute;
     left: 0px;
   }
-
   .sr-only::before {
     top: 4px;
     transform: rotate(45deg);
   }
-
   .sr-only::after {
     top: 4px;
     transform: rotate(-45deg);
   }
-
   .navbar-toggler.collapsed .sr-only::before {
     transform: rotate(0);
   }
-
   .navbar-toggler.collapsed .sr-only::after {
     top: 0;
     transform: rotate(0);

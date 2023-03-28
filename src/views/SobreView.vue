@@ -59,7 +59,7 @@ export default {
   text-align: justify;
 }
 .company-img {
-  margin: 30px auto 0px;
+  margin: 10px auto 10px;
   text-align: justify;
 }
 h2 {
