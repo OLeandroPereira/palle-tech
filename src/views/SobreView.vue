@@ -40,7 +40,6 @@ export default {
   section #sobre-nos {
   text-align: center;
 }
-
 .container {
   width: 75%;
 }
